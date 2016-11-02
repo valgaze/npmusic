@@ -48,7 +48,7 @@ if (program.path) {
 
 if (program.add) {
   const url = program.add;
-  songUtil.add(url).then((output) => {
+  return songUtil.add(url).then((output) => {
     console.log("Song added successfully");
   }).catch((e) => {
     console.log("Error adding song", e);
@@ -65,6 +65,7 @@ if (program.mood) {
   }
 } else {
   const random = require("./lib/songUtil").selectRandom();
+
   const MUSICINST = _play(random);
   if (program.args.length) {
     npmInstall(MUSICINST, program.args);
@@ -78,7 +79,7 @@ function _play(url) {
   const exec = require('child_process').exec;
   const inst = exec(COMMAND, (err, stdout, stderr) => {
     if (err) {
-      console.log("ERROR:", err);
+      // console.log("ERROR:", err);
       return;
     }
     console.log("stdout", stdout);
@@ -88,23 +89,28 @@ function _play(url) {
 }
 
 function npmInstall (specialInst, payload = []) {
-  var util  = require('util'),
-  spawn = require('child_process').spawn,
-  cmd    = spawn('npm', payload);
+  const rootCommand = payload[0];
+  let spawn = require('child_process').spawn;
+  if (songUtil.validNPMCommand(rootCommand)) {
+    var cmd = spawn('npm', payload);
+    cmd.stdout.on('data', function (data) {
+      console.log(data.toString());
+    });
 
-  cmd.stdout.on('data', function (data) {
-    console.log(data.toString());
-  });
+    cmd.stderr.on('data', function (data) {
+      console.log(data.toString());
+    });
 
-  cmd.stderr.on('data', function (data) {
-    console.log(data.toString());
-  });
+    cmd.on('exit', function (code) {
+      console.log("\n\nDONE!", code);
+      // const pid = specialInst.pid;
+      // process.kill(pid);
+      specialInst.kill();
+    });
 
-  cmd.on('exit', function (code) {
-    console.log("\n\nDONE!");
-    // const pid = specialInst.pid;
-    // process.kill(pid);
-    specialInst.kill();
-  });
+  } else {
+    console.log(`"${rootCommand}" does not appear to be a valid NPM command`);
+  }
+
 
 }
