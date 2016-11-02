@@ -43,7 +43,7 @@ if (program.types) {
 
 if (program.path) {
   var url = program.path;
-  _play(url);
+  return _play(url);
 }
 
 if (program.add) {
