@@ -4,7 +4,7 @@ I have bad taste in music, happily accepting PRs here: https://github.com/valgaz
 
 ------------
 
-Just do this:
+For the impatient, just do this:
 
 ```sh
 npm i -g npmusic && npmusic
@@ -39,7 +39,7 @@ See $ npmusic --help for a listing of flags and how to use them
 ```
 
 
-You need node version {{MINIMUM VERSION}} and unfortunately for now, only Mac machines supported
+This has been tested as low as version node 4.2.6 and unfortunately for now, only Mac machines are supported
 
 Under the hood uses youtube-dl, mpv for the actual heavy lifting, this is just a thin wrapper
 
