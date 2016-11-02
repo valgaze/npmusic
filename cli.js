@@ -37,8 +37,11 @@ if (program.fix) {
 if (program.types) {
   //use logger
   console.log("*********************");
+    console.log("Usage:")
+    console.log("$ npmusic -m <mood_name>");
     console.log(moodTypes);
   console.log("*********************");
+  return;
 }
 
 if (program.path) {
