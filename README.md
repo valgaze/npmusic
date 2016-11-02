@@ -1,4 +1,6 @@
 Companion blog post: https://medium.com/@valgaze/npm-i-npmusic-g-npmusic-7443ac042e99#.w97n3s18l
+
+
 tl;dr: Switch any npm command with “npmusic” and listen to music while it is working and when it exits, the music stops. Pointless but fun, Mac only for now, install with $ npm i npmusic -g
 
 Happily accepting PRs here (esp for better music): https://github.com/valgaze/npmusic
