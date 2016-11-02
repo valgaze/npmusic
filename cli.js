@@ -1,14 +1,15 @@
-const args = process.argv;
-const PWD = args[1];
-const npmArgs = args.slice(2);
+"use strict";
 
-const program = require('commander');
-const config = require("./config.json");
-const songUtil = require("./lib/songUtil");
-const moodTypes = Object.keys(config.moods);
+var args = process.argv;
+var PWD = args[1];
+var npmArgs = args.slice(2);
 
-program
-  .version('0.0.1')
+var program = require('commander');
+var config = require("./config.json");
+var songUtil = require("./lib/songUtil");
+var moodTypes = Object.keys(config.moods);
+
+program.version('0.0.1')
   .option('-m, --mood [type]', 'What kind of music do you want to hear? ')
   .option('-t, --types', 'List all available music types')
   .option('-p, --path [path]', 'Play audio located at this path (youtube url)')
@@ -17,70 +18,64 @@ program
   .parse(process.argv);
 
 if (program.fix) {
-  const path = require('path');
-  const fileDir = path.resolve(__filename, "..");
-  const cwd = process.cwd();
-  const COMMAND = `cd ${fileDir} && npm run fix && cd ${cwd}`;
-  const exec = require('child_process').exec;
+  var path = require('path');
+  var fileDir = path.resolve(__filename, "..");
+  var cwd = process.cwd();
+  var COMMAND = "cd " + fileDir + " && npm run fix && cd " + cwd;
+  var exec = require('child_process').exec;
   console.log("Applying fixes...");
-  const inst = exec(COMMAND, (err, stdout, stderr) => {
+  return exec(COMMAND, function (err, stdout, stderr) {
     if (err) {
-      console.error("Error:", err);
-      return;
+      return console.error("Error:", err);
     }
     console.log("stdout", stdout);
   });
-  return;
 }
-
 
 if (program.types) {
   //use logger
   console.log("*********************");
-    console.log("Usage:")
-    console.log("$ npmusic -m <mood_name>");
-    console.log(moodTypes);
-  console.log("*********************");
-  return;
+  console.log("Usage:");
+  console.log("$ npmusic -m <mood_name>");
+  console.log(moodTypes);
+  return console.log("*********************");
 }
 
 if (program.path) {
-  const url = program.path;
-  return _play(url);
+  var url = program.path;
+  _play(url);
 }
 
 if (program.add) {
-  const url = program.add;
-  return songUtil.add(url).then((output) => {
+  var _url = program.add;
+  return songUtil.add(_url).then(function (output) {
     console.log("Song added successfully");
-  }).catch((e) => {
+  }).catch(function (e) {
     console.log("Error adding song", e);
-  })
+  });
 }
 
-
 if (program.mood) {
-  const index = config.moods[program.mood];
-  const url = config.content[index].url;
-  const MUSICINST = _play(url);
+  var index = config.moods[program.mood];
+  var _url2 = config.content[index].url;
+  var MUSICINST = _play(_url2);
   if (program.args.length) {
     npmInstall(MUSICINST, program.args);
   }
 } else {
-  const random = require("./lib/songUtil").selectRandom();
+  var random = require("./lib/songUtil").selectRandom();
 
-  const MUSICINST = _play(random);
+  var _MUSICINST = _play(random);
   if (program.args.length) {
-    npmInstall(MUSICINST, program.args);
+    npmInstall(_MUSICINST, program.args);
   }
 }
 
-
 function _play(url) {
-  const COMMAND = `mpv --no-video ${url}`;
-    //mpv --no-video https://www.youtube.com/watch?v=0zz85g_7B_g
-  const exec = require('child_process').exec;
-  const inst = exec(COMMAND, (err, stdout, stderr) => {
+  var COMMAND = "mpv --no-video " + url;
+  //mpv --no-video https://www.youtube.com/watch?v=0zz85g_7B_g
+  var exec = require('child_process').exec;
+  var inst = exec(COMMAND, function (err, stdout, stderr) {
     if (err) {
       // console.log("ERROR:", err);
       return;
@@ -91,9 +86,11 @@ function _play(url) {
   return inst;
 }
 
-function npmInstall (specialInst, payload = []) {
-  const rootCommand = payload[0];
-  let spawn = require('child_process').spawn;
+function npmInstall(specialInst) {
+  var payload = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+  var rootCommand = payload[0];
+  var spawn = require('child_process').spawn;
   if (songUtil.validNPMCommand(rootCommand)) {
     var cmd = spawn('npm', payload);
     cmd.stdout.on('data', function (data) {
@@ -110,10 +107,7 @@ function npmInstall (specialInst, payload = []) {
       // process.kill(pid);
       specialInst.kill();
     });
-
   } else {
-    console.log(`"${rootCommand}" does not appear to be a valid NPM command`);
+    console.log("\"" + rootCommand + "\" does not appear to be a valid NPM command");
   }
-
-
 }
