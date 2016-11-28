@@ -7,14 +7,15 @@ var npmArgs = args.slice(2);
 var program = require('commander');
 var config = require("./config.json");
 var songUtil = require("./lib/songUtil");
-var moodTypes = Object.keys(config.moods);
+var version = require("./package.json").version;
 
-program.version('0.0.1')
+program.version(version)
   .option('-m, --mood [type]', 'What kind of music do you want to hear? ')
   .option('-t, --types', 'List all available music types')
   .option('-p, --path [path]', 'Play audio located at this path (youtube url)')
   .option('-a, --add [path]', 'Add audio to library located at this path (youtube url)')
   .option("-f, --fix", 'Attempt to install/update dependencies')
+  .option("-d, --display", "Display current song information if available")
   .parse(process.argv);
 
 if (program.fix) {
@@ -37,7 +38,7 @@ if (program.types) {
   console.log("*********************");
   console.log("Usage:");
   console.log("$ npmusic -m <mood_name>");
-  console.log(moodTypes);
+  songUtil.fetchSongs();
   return console.log("*********************");
 }
 
@@ -56,16 +57,23 @@ if (program.add) {
 }
 
 if (program.mood) {
-  var index = config.moods[program.mood];
-  var _url2 = config.content[index].url;
+  var songObj = songUtil.fetchSongs(program.mood);
+  var _url2 = songObj["source"];
+  console.log("url", _url2, songObj);
+  if (program.display) {
+    songUtil.displaySong(songObj);
+  }
   var MUSICINST = _play(_url2);
   if (program.args.length) {
     npmInstall(MUSICINST, program.args);
   }
 } else {
   var random = require("./lib/songUtil").selectRandom();
-
-  var _MUSICINST = _play(random);
+  var url = random.source;
+  if (program.display) {
+    songUtil.displaySong(random);
+  }
+  var _MUSICINST = _play(url);
   if (program.args.length) {
     npmInstall(_MUSICINST, program.args);
   }

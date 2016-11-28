@@ -1,116 +1,169 @@
 {
 	"firstTry": 0,
 	"lockDefault": false,
-	"defaultSong": "https://www.youtube.com/watch?v=Og8v3vvYLvY",
-	"moods": {
-		"exciting": 0,
-		"budlight": 1,
-		"hipster": 2,
-		"rockyourfaceoff": 3,
-		"arkansas": 4,
-		"nyancat": 5,
-		"catchy": 6,
-		"remix": 7,
-		"truegrit": 8,
-		"trafficcone": 9,
-		"treasure": 10
-	},
+	"defaultSong": "https://www.youtube.com/watch?v=otGmpQpiVjw",
 	"content": [{
-		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=Og8v3vvYLvY"
+		"tag": "whiskey",
+		"source": "https://www.youtube.com/watch?v=L-LuQVKzZMM",
+		"artist": "The Pogues",
+		"title": "Whiskey you're the Devil"
 	}, {
-		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=bTXJQ5ql5Fw"
+		"tag": "candy",
+		"source": "https://www.youtube.com/watch?v=JqowmHgxVJQ",
+		"artist": "Harry McClintock",
+		"title": "The Big Rock Candy Mountain"
 	}, {
-		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=0zz85g_7B_g"
+		"tag": "frampton",
+		"source": "https://www.youtube.com/watch?v=cYGp5shqLZg",
+		"artist": "Peter Frampton",
+		"title": "Do you feel like we do"
 	}, {
-		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=kLXY2NAQaSU"
+		"tag": "loco",
+		"source": "https://www.youtube.com/watch?v=GJIIXJm7k_k&",
+		"artist": "Oskar Flores",
+		"title": "El Mariachi Loco"
 	}, {
-		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=zi0wstPuncc"
+		"tag": "jessica",
+		"source": "https://www.youtube.com/watch?v=yRDivUb5EeA",
+		"artist": "Allman Brothers Band",
+		"title": "Jessica"
 	}, {
-		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=a_4G3HjGNbw"
+		"tag": "signe",
+		"source": "https://www.youtube.com/watch?v=FYNbn1rHGwE",
+		"artist": "Eric Clapton",
+		"title": "signe"
 	}, {
+		"tag": "exciting",
+		"source": "https://www.youtube.com/watch?v=Og8v3vvYLvY",
 		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=1NImu3Q9Qv4"
+		"title": null
 	}, {
-		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=iD_qRi-jVw4"
+		"tag": "hipster",
+		"source": "https://www.youtube.com/watch?v=0zz85g_7B_g",
+		"artist": "Bombadil",
+		"title": "Coughing on the F Train"
 	}, {
-		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=UuAZ4WhbI8o"
+		"tag": "arkansas",
+		"source": "https://www.youtube.com/watch?v=y4bqwmqbli8",
+		"artist": "Jimmy Dorsey",
+		"title": "Arkansas Traveler (instrumental)"
 	}, {
-		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=K2P39ost14k"
+		"tag": "nyan",
+		"source": "https://www.youtube.com/watch?v=a_4G3HjGNbw",
+		"artist": "Lucas Heil",
+		"title": "Nyan Cat-- Smooth Jazz Cover"
 	}, {
-		"artist": null,
-		"title": null,
-		"url": "https://www.youtube.com/watch?v=nPvuNsRccVw"
+		"tag": "ignition",
+		"source": "https://www.youtube.com/watch?v=iD_qRi-jVw4",
+		"artist": "R Kelly",
+		"title": "Ignition (remix)"
+	}, {
+		"tag": "truegrit",
+		"source": "https://www.youtube.com/watch?v=UuAZ4WhbI8o",
+		"artist": "Elmer Bernstein",
+		"title": "True Grit"
+	}, {
+		"tag": "moonhooch",
+		"source": "https://www.youtube.com/wwBhxBBa7tE?t=1m4s",
+		"artist": "Moon Hooch",
+		"title": "NPR Music Tiny Desk Concert"
+	}, {
+		"tag": "treasure",
+		"source": "https://www.youtube.com/watch?v=nPvuNsRccVw",
+		"artist": "Bruno Mars",
+		"title": "Treasure"
+	}, {
+		"tag": "kira",
+		"source": "https://www.youtube.com/watch?v=prUI-QoWPyM",
+		"artist": "Kira Lingman",
+		"title": "Morning Comes"
+	}, {
+		"tag": "ofersure",
+		"source": "https://www.youtube.com/watch?v=oMNrMBL1VYg",
+		"artist": "the Ofersures",
+		"title": "Folk Song for Dogs"
+	}, {
+		"tag": "type",
+		"source": "https://www.youtube.com/watch?v=IyVPyKrx0Xo",
+		"artist": "Saint Motel",
+		"title": "My Type"
+	}, {
+		"tag": "spaces",
+		"source": "https://www.youtube.com/watch?v=skZPzx-XlD0",
+		"artist": "Donald Bryd",
+		"title": "Places and Spaces"
+	}, {
+		"tag": "budlight",
+		"source": "https://youtu.be/R7xbhKIiw4Y?t=36s",
+		"artist": "Pitbull & friends",
+		"title": "Greenlight"
+	}, {
+		"tag": "peaces",
+		"source": "https://www.youtube.com/watch?v=wvAnQqVJ3XQ",
+		"artist": "The Presidents of the United States of America",
+		"title": "Peaches"
+	}, {
+		"tag": "common",
+		"source": "https://www.youtube.com/watch?v=9rjd2S6D4dU",
+		"artist": "Common",
+		"title": "be"
+	}, {
+		"tag": "lawyers",
+		"source": "https://www.youtube.com/watch?v=lP5Xv7QqXiM",
+		"artist": "Warren Zevon",
+		"title": "Laywers, Guns, & Money"
 	}],
 	"npmCommands": {
-	  "access": 1,
-	  "adduser": 1,
-	  "bin": 1,
-	  "bugs": 1,
-	  "build": 1,
-	  "bundle": 1,
-	  "cache": 1,
-	  "completion": 1,
-	  "config": 1,
-	  "dedupe": 1,
-	  "deprecate": 1,
-	  "dist-tag": 1,
-	  "docs": 1,
-	  "edit": 1,
-	  "explore": 1,
-	  "help": 1,
-	  "help-search": 1,
-	  "init": 1,
-	  "install": 1,
-	  "install-test": 1,
-	  "link": 1,
-	  "logout": 1,
-	  "ls": 1,
-	  "npm": 1,
-	  "outdated": 1,
-	  "owner": 1,
-	  "pack": 1,
-	  "ping": 1,
-	  "prefix": 1,
-	  "prune": 1,
-	  "publish": 1,
-	  "rebuild": 1,
-	  "repo": 1,
-	  "restart": 1,
-	  "root": 1,
-	  "run-script": 1,
-	  "search": 1,
-	  "shrinkwrap": 1,
-	  "star": 1,
-	  "stars": 1,
-	  "start": 1,
-	  "stop": 1,
-	  "tag": 1,
-	  "team": 1,
-	  "test": 1,
-	  "uninstall": 1,
-	  "unpublish": 1,
-	  "update": 1,
-	  "version": 1,
-	  "view": 1,
-	  "whoami": 1
+		"access": 1,
+		"adduser": 1,
+		"bin": 1,
+		"bugs": 1,
+		"build": 1,
+		"bundle": 1,
+		"cache": 1,
+		"completion": 1,
+		"config": 1,
+		"dedupe": 1,
+		"deprecate": 1,
+		"dist-tag": 1,
+		"docs": 1,
+		"edit": 1,
+		"explore": 1,
+		"help": 1,
+		"help-search": 1,
+		"init": 1,
+		"install": 1,
+		"install-test": 1,
+		"link": 1,
+		"logout": 1,
+		"ls": 1,
+		"npm": 1,
+		"outdated": 1,
+		"owner": 1,
+		"pack": 1,
+		"ping": 1,
+		"prefix": 1,
+		"prune": 1,
+		"publish": 1,
+		"rebuild": 1,
+		"repo": 1,
+		"restart": 1,
+		"root": 1,
+		"run-script": 1,
+		"search": 1,
+		"shrinkwrap": 1,
+		"star": 1,
+		"stars": 1,
+		"start": 1,
+		"stop": 1,
+		"tag": 1,
+		"team": 1,
+		"test": 1,
+		"uninstall": 1,
+		"unpublish": 1,
+		"update": 1,
+		"version": 1,
+		"view": 1,
+		"whoami": 1
 	}
 }
