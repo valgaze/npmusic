@@ -1,13 +1,13 @@
 {
   "name": "npmusic",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Use $ npmmusic install instead of $ npm install for music while you wait",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall":"cd scripts && chmod +x ./preinstall.sh && ./preinstall.sh && cd ..",
-    "postinstall":"cd scripts node postinstall.js && chmod +x ./postinstall.sh && ./postinstall.sh",
-    "fix":"cd scripts && chmod +x ./fix.sh && ./fix.sh && cd .."
+    "preinstall": "cd scripts && chmod +x ./preinstall.sh && ./preinstall.sh && cd ..",
+    "postinstall": "cd scripts node postinstall.js && chmod +x ./postinstall.sh && ./postinstall.sh",
+    "fix": "cd scripts && chmod +x ./fix.sh && ./fix.sh && cd .."
   },
   "keywords": [
     "music",
