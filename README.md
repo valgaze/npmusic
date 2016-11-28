@@ -36,14 +36,14 @@ $ npmmusic -t #List all moods available
 
 $ npmusic -p  https://www.youtube.com/watch?v=w0N4twV28Mw #Start playing this song in your terminal [alternatively --play url]
 
-$ npmusic -a https://www.youtube.com/watch?v=Ized1XMRp_I #Add this song to the npmusic random rotation [alternatively --add url]
+$ npmusic -d #Play a random song but see information about song with -d flag [alternatively use --dislplay]
 
 See $ npmusic --help for a listing of flags and how to use them
 ```
 
 This has been tested as low as version node 4.2.6 and unfortunately for now, only Mac machines are supported.
 
-Credits: Under the hood uses [youtube-dl](https://rg3.github.io/youtube-dl/), [mpv](https://mpv.io), and [brew](http://brew.sh/) for the actual heavy lifting, & [commader.js](https://github.com/tj/commander.js) for CLI 
+Credits: Under the hood uses [youtube-dl](https://rg3.github.io/youtube-dl/), [mpv](https://mpv.io), and [brew](http://brew.sh/) for the actual heavy lifting, & [commader.js](https://github.com/tj/commander.js) for CLI
 
 ## Help
 

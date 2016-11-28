@@ -13,7 +13,6 @@ program.version(version)
   .option('-m, --mood [type]', 'What kind of music do you want to hear? ')
   .option('-t, --types', 'List all available music types')
   .option('-p, --path [path]', 'Play audio located at this path (youtube url)')
-  .option('-a, --add [path]', 'Add audio to library located at this path (youtube url)')
   .option("-f, --fix", 'Attempt to install/update dependencies')
   .option("-d, --display", "Display current song information if available")
   .parse(process.argv);
@@ -44,7 +43,7 @@ if (program.types) {
 
 if (program.path) {
   var url = program.path;
-  _play(url);
+  return _play(url);
 }
 
 if (program.add) {
@@ -59,7 +58,6 @@ if (program.add) {
 if (program.mood) {
   var songObj = songUtil.fetchSongs(program.mood);
   var _url2 = songObj["source"];
-  console.log("url", _url2, songObj);
   if (program.display) {
     songUtil.displaySong(songObj);
   }
