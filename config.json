@@ -98,7 +98,7 @@
 		"artist": "Pitbull & friends",
 		"title": "Greenlight"
 	}, {
-		"tag": "peaces",
+		"tag": "peaches",
 		"source": "https://www.youtube.com/watch?v=wvAnQqVJ3XQ",
 		"artist": "The Presidents of the United States of America",
 		"title": "Peaches"
@@ -112,6 +112,11 @@
 		"source": "https://www.youtube.com/watch?v=lP5Xv7QqXiM",
 		"artist": "Warren Zevon",
 		"title": "Laywers, Guns, & Money"
+	}, {
+		"tag": "mahna",
+		"source": "https://www.youtube.com/watch?v=agj1WpGLxoo",
+		"artist": "Cake",
+		"title": "Mahna Mahna"
 	}],
 	"npmCommands": {
 		"access": 1,

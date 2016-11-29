@@ -36,7 +36,8 @@ if (program.types) {
   //use logger
   console.log("*********************");
   console.log("Usage:");
-  console.log("$ npmusic -m <mood_name>");
+  console.log("$ npmusic -m <tag>");
+  console.log("ex. $ npmusic -m signe");
   songUtil.fetchSongs();
   return console.log("*********************");
 }
