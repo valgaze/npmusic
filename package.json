@@ -1,6 +1,6 @@
 {
   "name": "npmusic",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Use $ npmmusic install instead of $ npm install for music while you wait",
   "main": "index.js",
   "scripts": {
