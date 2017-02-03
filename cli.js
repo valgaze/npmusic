@@ -15,6 +15,7 @@ program.version(version)
   .option('-p, --path [path]', 'Play audio located at this path (youtube url)')
   .option("-f, --fix", 'Attempt to install/update dependencies')
   .option("-d, --display", "Display current song information if available")
+  .option("-b, --bugs", "Debug mode with verbose errors")
   .parse(process.argv);
 
 if (program.fix) {
@@ -84,8 +85,14 @@ function _play(url) {
   var exec = require('child_process').exec;
   var inst = exec(COMMAND, function (err, stdout, stderr) {
     if (err) {
-      // console.log("ERROR:", err);
-      return;
+      console.log("*********************");
+      console.log("ERROR: Ruh-roh there was an error with npmusic!");
+      if (program.bugs)   console.log("Full error:", err);
+
+      console.log("There is probably an issue with the youtube-dl version");
+      console.log("At the command prompt type $ youtube-dl -U");
+      process.exit(1);
+      return console.log("*********************");
     }
     console.log("stdout", stdout);
   });
