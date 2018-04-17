@@ -2,7 +2,14 @@
 	"firstTry": 0,
 	"lockDefault": false,
 	"defaultSong": "https://www.youtube.com/watch?v=otGmpQpiVjw",
-	"content": [{
+	"content": [
+	{
+		"tag": "breathe",
+		"source": "https://www.youtube.com/watch?v=fo9jAOx6Pdw",
+		"artist": "Jimmy Buffett & Caroline Jones",
+		"title": "Breathe In, Breathe Out, Move On ft. Caroline Jones"
+	},
+	{
 		"tag": "whiskey",
 		"source": "https://www.youtube.com/watch?v=L-LuQVKzZMM",
 		"artist": "The Pogues",
