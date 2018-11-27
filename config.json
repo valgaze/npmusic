@@ -124,6 +124,11 @@
 		"source": "https://www.youtube.com/watch?v=agj1WpGLxoo",
 		"artist": "Cake",
 		"title": "Mahna Mahna"
+	}, {
+		"tag": "thinking",
+		"source": "https://www.youtube.com/watch?v=HuABhumm6fY",
+		"artist": "Jeopardy",
+		"title": "Theme Music"
 	}],
 	"npmCommands": {
 		"access": 1,
